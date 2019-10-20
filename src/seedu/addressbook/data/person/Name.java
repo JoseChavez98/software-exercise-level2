@@ -9,7 +9,7 @@ import seedu.addressbook.data.exception.IllegalValueException;
  * Represents a Person's name in the address book.
  * Guarantees: immutable; is valid as declared in {@link #isValidName(String)}
  */
-public class Name {
+public class Name implements Printable{
 
     public static final String EXAMPLE = "John Doe";
     public static final String MESSAGE_NAME_CONSTRAINTS = "Person names should be spaces or alphabetic characters";
@@ -60,6 +60,11 @@ public class Name {
         return fullName.hashCode();
     }
 
+    @Override
+    public void getPrintableString() {
+        System.out.println("Name: "+this.fullName);
+    }
+  
     public boolean  isSimilar(Name name){
         if(this.fullName.equals(name.fullName))
             return true;
