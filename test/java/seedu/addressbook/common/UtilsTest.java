@@ -36,7 +36,7 @@ public class UtilsTest {
     }
 
     @Test
-    public void isAnyNull() {
+    public void isAnyNull() throws Exception{
         // no items
         assertFalse(Utils.isAnyNull());
 
@@ -53,6 +53,7 @@ public class UtilsTest {
 
         // at least one item, some of which are null
         assertTrue(Utils.isAnyNull(null, 1));
+        assertTrue(Utils.isAnyNull(null, 2));
         assertTrue(Utils.isAnyNull("A", null, "C"));
     }
 

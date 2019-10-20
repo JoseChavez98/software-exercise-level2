@@ -21,6 +21,9 @@ public class Person implements ReadOnlyPerson {
     private int sequenceNumber;
     private static int nextSequenceNumber = 0;
 
+
+    public Person(){}
+
     /**
      * Assumption: Every field must be present and not null.
      */

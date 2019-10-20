@@ -142,4 +142,10 @@ public class UniquePersonList implements Iterable<Person> {
      * there is no such matching person in the list.
      */
     public static class PersonNotFoundException extends Exception {}
+
+    public void showList(){
+        for(Person person : internalList){
+            person.getName().showName();
+        }
+    }
 }
