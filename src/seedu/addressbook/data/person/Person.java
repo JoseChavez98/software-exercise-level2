@@ -18,6 +18,8 @@ public class Person implements ReadOnlyPerson {
     private Address address;
 
     private final Set<Tag> tags = new HashSet<>();
+    private int sequenceNumber;
+    private static int nextSequenceNumber = 0;
 
     /**
      * Assumption: Every field must be present and not null.
@@ -28,6 +30,7 @@ public class Person implements ReadOnlyPerson {
         this.email = email;
         this.address = address;
         this.tags.addAll(tags);
+        this.sequenceNumber = ++nextSequenceNumber;
     }
 
     /**
