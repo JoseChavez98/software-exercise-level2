@@ -60,4 +60,15 @@ public class Name {
         return fullName.hashCode();
     }
 
+    public boolean  isSimilar(Name name){
+        if(this.fullName.equals(name.fullName))
+            return true;
+        else
+            return false;
+    }
+
+    public void showName(){
+        System.out.println(this.fullName);
+    }
+
 }
