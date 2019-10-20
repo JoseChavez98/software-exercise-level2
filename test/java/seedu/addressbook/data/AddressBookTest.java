@@ -130,4 +130,11 @@ public class AddressBookTest {
 
         assertTrue(isIdentical(allPersons, personsToCheck));
     }
+
+    @Test
+    public void equalNames() throws Exception{
+        Person person1=new Person();
+        Person person2=new Person();
+        assertTrue(person1.getName().isSimilar(person2.getName()));
+    }
 }
